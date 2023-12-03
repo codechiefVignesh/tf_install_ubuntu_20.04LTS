@@ -20,3 +20,4 @@ $ sudo apt install nvidia-cuda-toolkit
 <pre lang = "bash"><code>
 $ nvcc --version
 </code></pre>
+> Then follow this link to install the cuDNN compatible with the CUDA ToolKit
