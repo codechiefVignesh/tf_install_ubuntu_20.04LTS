@@ -23,7 +23,9 @@ $ nvcc --version
 > Then follow this link to install the cuDNN compatible with the CUDA ToolKit
 
 ## 2) Installing cuDNN
-Follow this link to install : https://developer.nvidia.com/rdp/cudnn-download
+>Click “Download cuDNN v7.6.5 (November 5th, 2019) for CUDA 10.1”, then choose “cuDNN Library for Linux” to download cuDNN 7.6.5 for CUDA 10.1. 
+>Follow this link to install : https://developer.nvidia.com/rdp/cudnn-download
+
 > Then run the following commands in the terminal in the folder containing the downloaded file
 
 <pre lang = "bash"><code>
