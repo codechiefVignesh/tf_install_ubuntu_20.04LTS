@@ -11,5 +11,12 @@ In Ubuntu 20.04LTS install a proprietary Nvidia Driver from the Additional Drive
 > Preferred versions are <= 535.x
 > Then install the CUDA ToolKit by running the following command
 
-'''bash
+<pre lang = "bash"><code>
 $ sudo apt install nvidia-cuda-toolkit
+</code></pre>
+
+> Then run this command to verify the installation
+
+<pre lang = "bash"><code>
+$ nvcc --version
+</code></pre>
