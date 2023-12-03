@@ -6,10 +6,22 @@
 > 3) Source Environment Variables
 > 4) Downgrade the Numpy and
 > 5) Install TensorFlow with GPU support
-## 1) Installing CUDA ToolKit 10.1
+
+# PREREQUISITES
 In Ubuntu 20.04LTS install a proprietary Nvidia Driver from the Additional Drivers software
-> Preferred versions are <= 535.x
-> Then install the CUDA ToolKit by running the following command
+> Preferred versions are <= 535.x (or)
+Installing nvidia graphics driver
+<pre lang = "bash"><code>
+$ sudo add-apt-repository ppa:graphics-drivers/ppa
+$ sudo apt install nvidia-driver-525 or 535
+</code></pre>
+>Installing pip
+<pre lang = "bash"><code>
+$ sudo apt install python3-pip
+</code></pre>
+## 1) Installing CUDA ToolKit 10.1
+
+> Install the CUDA ToolKit by running the following command
 
 <pre lang = "bash"><code>
 $ sudo apt install nvidia-cuda-toolkit
