@@ -21,3 +21,48 @@ $ sudo apt install nvidia-cuda-toolkit
 $ nvcc --version
 </code></pre>
 > Then follow this link to install the cuDNN compatible with the CUDA ToolKit
+
+## 2) Installing cuDNN
+Follow this link to install : https://developer.nvidia.com/rdp/cudnn-download
+> Then run the following commands in the terminal in the folder containing the downloaded file
+
+<pre lang = "bash"><code>
+$ tar -xvzf cudnn-10.1-linux-x64-v7.6.5.32.tgz
+$ sudo cp cuda/include/cudnn.h /usr/lib/cuda/include/
+$ sudo cp cuda/lib64/libcudnn* /usr/lib/cuda/lib64/
+$ sudo chmod a+r /usr/lib/cuda/include/cudnn.h /usr/lib/cuda/lib64/libcudnn*
+</code></pre>
+
+## 3) Source the environment variables
+<pre lang = "bash"><code>
+$ echo 'export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+$ echo 'export LD_LIBRARY_PATH=/usr/lib/cuda/include:$LD_LIBRARY_PATH' >> ~/.bashrc
+</code></pre>
+
+> Now load the variables sourced
+<pre lang = "bash"><code>
+$ source ~/.bashrc
+</code></pre>
+
+## 4) Downgrade NumPy and Protobuf
+> these may be in higher versions than the supported ones for tf and CUDA so downgrading them to the last supported version will be better
+<pre lang = "bash"><code>
+$ pip install protobuf==3.20.0
+</code></pre>
+<pre lang = "bash"><code>
+$ pip install numpy==1.20.0
+</code></pre>
+
+## 5) Installing Tensorflow with GPU support
+<pre lang = "bash"><code>
+$ pip install tensorflow==2.2.0
+</code></pre>
+> Then enter python3 in the shell to enter python idle shell.
+> Now we will test our installation
+<pre lang = "bash"><code>
+>>> import tensorflow as tf
+>>> tf.config.list_physical_devices("GPU")
+[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+</code></pre>
+
+> These steps will ensure the successful installation of tensorflow in Ubuntu 20.04 with GPU support.
