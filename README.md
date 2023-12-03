@@ -8,10 +8,12 @@
 > 5) Install TensorFlow with GPU support
 
 # PREREQUISITES
+
 > In Ubuntu 20.04LTS install a proprietary Nvidia Driver from the Additional Drivers software
+
 > Preferred versions are <= 535.x
+
 > OR one can use the traditional method of installation
-> Installing nvidia graphics driver
 
 <pre lang = "bash"><code>
 $ sudo add-apt-repository ppa:graphics-drivers/ppa
